@@ -10,6 +10,28 @@ public class Voetbalclub {
         name = naam;
     }
 
+    public Voetbalclub() {
+
+    }
+
+    public String getName() {
+        if (name == null)
+            return "FC";
+        return name;
+    }
+
+    public int getAantalGewonnen() {
+        return aantalGewonnen;
+    }
+
+    public int getAantalGelijk() {
+        return aantalGelijk;
+    }
+
+    public int getAantalVerloren() {
+        return aantalVerloren;
+    }
+
     public void verwerkResultaat(char ch) {
         if (ch == 'w')
             aantalGewonnen = aantalGewonnen + 1;
@@ -30,7 +52,7 @@ public class Voetbalclub {
 
     @Override
     public String toString() {
-        return name
+        return getName()
                 + aantalGespeeld()
                 + " "
                 + aantalGewonnen
